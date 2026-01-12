@@ -12,6 +12,8 @@
     
 </body>
 <script>
+
+    //normal aaproch
     function addlanguage(langName){
         const li=document.createElement('li')
         li.innerHTML=`${langName}`
@@ -19,6 +21,15 @@
     }
     addlanguage('python')
     addlanguage('nodejs')
+
+    //optimal approch
+    function addlanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage('eng')
+    addlanguage('sans')
 
     //Edit
     const secondlang=document.querySelector('li:nth-child(2)')
